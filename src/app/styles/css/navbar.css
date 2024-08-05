@@ -1,0 +1,124 @@
+.header--navbar {
+    background: rgb(255,255,255);
+    background: linear-gradient(90deg, rgba(255,255,255, 0.9) 0%,
+    rgba(26,209,207,0) 56%, rgba(161,143,229, 0.01) 100%);
+
+
+    color: var(--black-font);
+    animation: gradientMove 3s ease infinite;
+    background-size: 200% 200%;
+
+    font-size: 1rem;
+    font-weight: 600;
+    font-family: 'Roboto', sans-serif;
+
+    align-items: center;
+}
+
+@keyframes gradientMove {
+    0% {
+        background-position: 0% 50%;
+    }
+    50% {
+        background-position: 100% 50%;
+    }
+    100% {
+        background-position: 0% 50%;
+    }
+}
+
+@keyframes textColorChange {
+    0% {
+        color: var(--black-font);
+    }
+    50% {
+        color: black;
+    }
+    100% {
+        color: var(--black-font);
+    }
+}
+
+.header-title {
+    color: var(--black-font);
+    max-width: 10rem;
+}
+
+.nav__links {
+    width: 100%;
+    text-align: center;
+}
+
+.nav__switch {
+    align-items: center;
+    width: 10rem;
+    padding-left: 2rem;
+}
+
+.nav__login {
+    width: 15rem;
+}
+
+.nav__links .navigator, .login, .dark-mode-button {
+    font-size: 0.9rem;
+    text-decoration: none;
+    cursor: pointer;
+    position: relative; 
+    overflow: hidden;
+    transition: color 0.5s ease;
+}
+
+.nav__links .navigator::after,
+.login::after, .dark-mode-button::after {
+    content: '';
+    position: absolute; 
+    bottom: 0;
+    left: 0;
+    width: 0;
+    height: 2px; 
+    background-color: var(--black-font);
+    transition: width 0.2s ease-in;
+}
+
+.nav__links .navigator:hover::after,
+.login:hover::after, .dark-mode-button:hover::after {
+    width: 100%;
+}
+
+
+@keyframes gradientMove {
+    0% {
+        background-position: 0% 50%;
+    }
+    50% {
+        background-position: 100% 50%;
+    }
+    100% {
+        background-position: 0% 50%;
+    }
+}
+
+#dark .header--navbar {
+    background: rgb(0, 0, 0);
+    background: linear-gradient(90deg, rgba(0, 0, 0, 0.9) 0%, rgba(70, 70, 70, 0) 85%, rgba(255, 255, 255, 0.73) 100%);
+    color: var(--white-font);
+    animation: gradientMove 3s ease infinite;
+    background-size: 200% 200%;
+}
+
+#dark .header-title,
+#dark .nav__links,
+#dark .nav__switch,
+#dark .nav__login,
+#dark .navigator,
+#dark .login,
+#dark .dark-mode-button {
+    color: var(--white-font);
+    transition: color 0.5s ease;
+}
+
+#dark .nav__links .navigator::after,
+#dark .login::after,
+#dark .dark-mode-button::after {
+    background-color: var(--white-font);
+}
