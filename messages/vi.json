@@ -1,0 +1,22 @@
+{
+    "navbar": {
+        "Welcome": "Chào mừng tới my Landing Page",
+        "Home": "Trang chủ",
+        "FunctionA": "Hàm A",
+        "FunctionB": "Hàm B",
+        "FunctionC": "Hàm C",
+        "DarkMode": "Tối",
+        "LightMode": "Sáng",
+        "Login": "Đăng nhập",
+        "Logout": "Đăng xuất"
+    },
+    "login": {
+        "Header": "Đăng nhập vào tài khoản của bạn",
+        "Email": "Địa chỉ email:",
+        "Password": "Mật khẩu:",
+        "Forgot": "Quên mật khẩu?",
+        "Button": "Đăng nhập",
+        "Not-a-member": "Chưa là thành viên?",
+        "Sign-up": "Đăng ký tại đây"
+    }
+}

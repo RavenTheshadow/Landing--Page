@@ -1,27 +1,18 @@
-import type { Metadata } from "next";
-import { Inter } from "next/font/google";
-import "@/app/styles/css/globals.css";
-import NavBar from "./components/navbar";
+import "@/styles/css/globals.css";
+import { getMessages } from "next-intl/server";
 
 
-const inter = Inter({ subsets: ["latin"] });
-
-export const metadata: Metadata = {
-  title: "Landing Page",
-  description: "A landing page",
-};
-
-export default function RootLayout({
-  children,
+export default async function RootLayout({
+  children
 }: Readonly<{
   children: React.ReactNode;
+  params: { locale: string };
 }>) {
+  const message = await getMessages();
+
   return (
-    <html lang="en">
-      <body className={inter.className}>
-        <NavBar />
-        {children}
-      </body>
+    <html>
+      {children}
     </html>
   );
 }

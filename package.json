@@ -11,9 +11,11 @@
   "dependencies": {
     "@mui/material": "^5.16.6",
     "next": "14.2.5",
+    "next-intl": "^3.17.2",
     "react": "^18",
     "react-dom": "^18",
     "react-oauth2": "^1.1.2",
+    "react-toastify": "^10.0.5",
     "zustand": "^4.5.4"
   },
   "devDependencies": {

@@ -1,0 +1,22 @@
+{
+    "navbar": {
+        "Welcome": "Welcome to my Landing Page",
+        "Home": "Home",
+        "FunctionA": "Function A",
+        "FunctionB": "Function B",
+        "FunctionC": "Function C",
+        "DarkMode": "Dark Mode",
+        "LightMode": "Light Mode",
+        "Login": "Login",
+        "Logout": "Logout"
+    },
+    "login": {
+        "Header": "Sign in to your account",
+        "Email": "Email address:",
+        "Password": "Password:",
+        "Forgot": "Forgot password?",
+        "Button": "Sign in",
+        "Not-a-member": "Not a member?",
+        "Sign-up": "Sign up here"
+    }
+}

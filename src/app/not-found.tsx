@@ -1,6 +1,4 @@
-import Link from 'next/link'
-import { headers } from 'next/headers'
-import "@/app/styles/css/not-found/notfound.css"
+import "@/styles/css/not-found/notfound.css";
 export default async function NotFound() {
     return (
         <div>
@@ -25,7 +23,6 @@ export default async function NotFound() {
                     Return Home
                 </a>
             </h2>
-
         </div>
     )
 }
