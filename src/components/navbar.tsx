@@ -2,7 +2,7 @@
 import "@/styles/css/navbar.css";
 import Link from "next/link";
 import { useEffect, useState } from "react";
-import { loggout, saveDarkMode } from "@/app/libs/LocalStorage";
+import { loggout, saveDarkMode } from "@/libs/LocalStorage";
 import { useTranslations } from "next-intl";
 import { usePathname, useRouter } from "next/navigation";
 

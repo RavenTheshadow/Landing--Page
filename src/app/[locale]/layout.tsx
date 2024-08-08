@@ -1,16 +1,16 @@
-import type { Metadata } from "next";
 import "@/styles/css/globals.css";
 import NavBar from "@/components/navbar";
 import { ToastContainer } from "react-toastify";
-import { getLocale, getMessages } from "next-intl/server";
+import { getMessages } from "next-intl/server";
 import { NextIntlClientProvider } from "next-intl";
 import "react-toastify/dist/ReactToastify.css";
-import { getDarkMode } from "../libs/LocalStorage";
+import { unstable_setRequestLocale } from 'next-intl/server';
 
-export const metadata: Metadata = {
-  title: "Landing Page",
-  description: "A landing page",
-};
+const locales = ['vi', 'en'];
+
+export function generateStaticParams() {
+  return locales.map((locale) => ({ locale }));
+}
 
 export default async function RootLayout({
   children,
@@ -19,7 +19,9 @@ export default async function RootLayout({
   children: React.ReactNode;
   params: { locale: string };
 }>) {
+  unstable_setRequestLocale(locale);
   const message = await getMessages();
+
   return (
     <html lang={locale}>
       <body>
